@@ -1,4 +1,4 @@
-enum Balls {
+export enum Balls {
     Football = "Футбольный мяч",
     Basketball = "Баскетбольный мяч",
     Tennis = "Теннисный мяч",

@@ -169,6 +169,14 @@ export namespace Transport {
             console.log(`VIN-номер: ${this._vin}`);
             console.log(`Регистрационный номер: ${this._registrationNumber}`);
         }
+
+        getVehicleDetails(): { vin: string, ownerFullName: string, registrationNumber: string } {
+            return {
+                vin: this._vin,
+                ownerFullName: `${this._owner.lastName} ${this._owner.firstName} ${this._owner.middleName}`,
+                registrationNumber: this._registrationNumber
+            };
+        }
     }
     export enum BodyType {
         Sedan = "Седан",
@@ -270,6 +278,7 @@ export namespace Transport {
         getAllVehicles(): T[];
         addVehicle(vehicle: T): void;
         sortByBrand(): T[]; 
+        findByOwnerLastName(lastName: string): T[];
     }
 
     export class VehicleStorageImpl<T extends Vehicle> implements VehicleStorage<T> {
@@ -289,6 +298,13 @@ export namespace Transport {
     
         sortByBrand(): T[] {
             return this.vehicles.slice().sort((a, b) => a.brand.localeCompare(b.brand));
+        }
+
+        findByOwnerLastName(lastName: string): T[] {
+            const lowerCaseLastName = lastName.toLowerCase();
+            return this.vehicles.filter(vehicle => 
+                vehicle.owner.lastName.toLowerCase() === lowerCaseLastName
+            );
         }
     }
 }

@@ -10,7 +10,7 @@ const owner = new Transport.OwnerImpl(
     "123456"
 );
 
-const car1 = new Transport.CarImpl(
+const car = new Transport.CarImpl(
     "Toyota",
     "Camry",
     2020,
@@ -21,33 +21,22 @@ const car1 = new Transport.CarImpl(
     Transport.CarClass.Comfort
 );
 
-const car2 = new Transport.CarImpl(
-    "Audi",
-    "A4",
-    2019,
-    "98765432109876543",
-    "B456DE",
-    owner,
-    Transport.BodyType.Sedan,
-    Transport.CarClass.Luxury
-);
-
 const bike = new Transport.MotorbikeImpl(
     "Yamaha",
     "YZF-R1",
     2021,
-    "12312312312312312",
-    "C789FG",
+    "98765432109876543",
+    "B456DE",
     owner,
     "Спортивная",
     true
 );
 
-const storage = new Transport.VehicleStorageImpl(new Date());
-storage.addVehicle(car1);
-storage.addVehicle(car2);
-storage.addVehicle(bike);
+const carDetails = car.getVehicleDetails();
+const bikeDetails = bike.getVehicleDetails();
 
-const sortedVehicles = storage.sortByBrand();
+console.log("Сведения об автомобиле:");
+console.log(carDetails);
 
-sortedVehicles.forEach(vehicle => vehicle.printVehicleInfo());
+console.log("Сведения о мотоцикле:");
+console.log(bikeDetails);

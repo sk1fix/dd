@@ -1,0 +1,88 @@
+{
+    "cars": [
+      {
+        "id": 1,
+        "brand": "Toyota",
+        "model": "Camry",
+        "year": 2022,
+        "price": 2500000,
+        "isUsed": false,
+        "specifications": {
+            "engine": "2.5L 4-cylinder",
+            "horsepower": 203,
+            "transmission": "automatic",
+            "fuelType": "petrol"
+        },
+        "colors": ["white", "black", "silver"],
+        "features": ["leather seats", "navigation", "blind spot monitoring"]
+      },
+      {
+        "id": 2,
+        "brand": "BMW",
+        "model": "X5",
+        "year": 2021,
+        "price": 5500000,
+        "isUsed": true,
+        "specifications": {
+            "engine": "3.0L 6-cylinder",
+            "horsepower": 335,
+            "transmission": "automatic",
+            "fuelType": "diesel"
+        },
+        "colors": ["blue", "black", "gray"],
+        "features": ["panoramic roof", "premium sound", "adaptive cruise control"],
+        "previousOwners": ["Иванов Иван", "Петров Петр"]
+      },
+      {
+        "id": 3,
+        "brand": "Lada",
+        "model": "Vesta",
+        "year": 2023,
+        "price": 1200000,
+        "isUsed": false,
+        "specifications": {
+            "engine": "1.6L 4-cylinder",
+            "horsepower": 106,
+            "transmission": "manual",
+            "fuelType": "petrol"
+        },
+        "colors": ["red", "white", "brown"],
+        "features": ["air conditioning", "abs", "esp"]
+      },
+      {
+        "id": 4,
+        "brand": "Tesla",
+        "model": "Model 3",
+        "year": 2023,
+        "price": 4000000,
+        "isUsed": false,
+        "specifications": {
+            "engine": "electric",
+            "horsepower": 283,
+            "transmission": "automatic",
+            "range": 448
+        },
+        "colors": ["black", "white", "red"],
+        "features": ["autopilot", "keyless entry", "premium interior"],
+        "chargingTime": 8.5
+      },
+      {
+        "id": 5,
+        "brand": "Kia",
+        "model": "Rio",
+        "year": 2020,
+        "price": 1500000,
+        "isUsed": true,
+        "specifications": {
+            "engine": "1.6L 4-cylinder",
+            "horsepower": 123,
+            "transmission": "automatic",
+            "fuelType": "petrol"
+        },
+        "colors": ["black", "silver", "blue"],
+        "features": ["heated seats", "rear camera", "android auto"],
+        "mileage": 45000,
+        "accidents": 1
+      }
+    ]
+  }

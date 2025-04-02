@@ -1,0 +1,9 @@
+<div>
+  <h3>Навигационная панель</h3>
+  <div>
+    <a routerLink="" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Страница 1</a>
+    <a routerLink="/page2" [queryParams]="{id: 'param'}" routerLinkActive="active">Страница 2</a>
+    <a routerLink="/page3">Страница 3</a>
+  </div>
+</div>
+<router-outlet></router-outlet>

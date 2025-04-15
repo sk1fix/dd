@@ -1,0 +1,32 @@
+<form (ngSubmit)="onSubmit()" #taskForm="ngForm">
+    <label>Тип*:
+        <select name="type" [(ngModel)]="task.type" required>
+            <option value="bug">Bug</option>
+            <option value="task">Task</option>
+        </select>
+    </label>
+
+    <label>Приоритет:
+        <select name="priority" [(ngModel)]="task.priority">
+            <option value="critical">Critical</option>
+            <option value="high">High</option>
+            <option value="medium">Medium</option>
+            <option value="low">Low</option>
+        </select>
+    </label>
+
+    <label>Статус*:
+        <select name="status" [(ngModel)]="task.status" required>
+            <option value="open">Open</option>
+            <option value="in progress">In Progress</option>
+            <option value="closed">Closed</option>
+        </select>
+    </label>
+
+    <label>Заголовок*: <input type="text" name="title" [(ngModel)]="task.title" required></label>
+    <label>Описание: <textarea name="description" [(ngModel)]="task.description"></textarea></label>
+    <label>Исполнитель: <input type="text" name="assignee" [(ngModel)]="task.assignee"></label>
+    <label>Создатель*: <input type="text" name="creator" [(ngModel)]="task.creator" required></label>
+
+    <button type="submit" [disabled]="taskForm.invalid">Добавить задачу</button>
+</form>
